@@ -1,0 +1,21 @@
+@import 'icon-action';
+
+.vui-icon-action {
+	@include vui-icon-action;
+}
+
+.vui-icon-action-text {
+	@include vui-icon-action-text;
+}
+
+.vui-icon-action-text-main {
+	@include vui-icon-action-text-main;
+}
+
+.vui-icon-action-text-gray {
+	@include vui-icon-action-text-gray;
+}
+
+.vui-icon-action-img {
+	@include vui-icon-action-img;
+}

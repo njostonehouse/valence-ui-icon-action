@@ -2,6 +2,9 @@
   "name": "vui-icon-action",
   "version": "0.0.1",
   "description": "Mixins and CSS for applying icon action styles",
+  "scripts": {
+    "build": "node-sass --output-style expanded icon-action.css.scss icon-action.css"
+  },
   "keywords": [
     "d2l",
     "valence-ui",
