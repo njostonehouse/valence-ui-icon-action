@@ -2,6 +2,10 @@
   "name": "vui-icon-action",
   "version": "0.0.1",
   "description": "Mixins and CSS for applying icon action styles",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Brightspace/valence-ui-icon-action.git"
+  },
   "scripts": {
     "build": "node-sass --output-style expanded icon-action.css.scss icon-action.css"
   },
