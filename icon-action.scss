@@ -6,6 +6,10 @@
 @mixin vui-icon-action-text() {
 	padding-left: 4px;
 	vertical-align: middle;
+	[dir='rtl'] & {
+		padding-right: 4px;
+		padding-left: 0;
+	}
 }
 
 @mixin vui-icon-action-text-main() {
@@ -29,4 +33,7 @@
 
 @mixin vui-icon-action-img() {
 	vertical-align: middle;
+	[dir='rtl'] & {
+		background-position: right top;
+	}
 }
