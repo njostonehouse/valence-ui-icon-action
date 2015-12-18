@@ -1,3 +1,6 @@
+@import 'bower_components/vui-link/link.scss';
+@import 'bower_components/vui-focus/focus.scss';
+
 @mixin vui-icon-action() {
 	display: inline-block;
 	text-decoration: none;
