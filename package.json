@@ -11,7 +11,8 @@
     "test": "csslint icon-action.css",
     "prebuild": "npm run clean",
     "build": "node-sass --output-style expanded icon-action.css.scss icon-action.css",
-    "postbuild": "npm test"
+    "postbuild": "npm test",
+    "postinstall": "bower install"
   },
   "keywords": [
     "d2l",
@@ -26,5 +27,8 @@
     "csslint": "^0.10.0",
     "node-sass": "^3.4.2",
     "rimraf": "^2.4.4"
+  },
+  "dependencies": {
+    "bower": "^1.7.1"
   }
 }
