@@ -4,34 +4,29 @@
 @mixin vui-icon-action() {
 	display: inline-block;
 	text-decoration: none;
+
+	&:focus {
+		@include vui-focus-outline;
+	}
 }
 
 @mixin vui-icon-action-text() {
+	color: $vui-link-color;
+	cursor: pointer;
+	text-decoration: $vui-link-textDecoration;
 	padding-left: 4px;
 	vertical-align: middle;
+
 	[dir='rtl'] & {
 		padding-right: 4px;
 		padding-left: 0;
 	}
-}
 
-@mixin vui-icon-action-text-main() {
-	@include vui-icon-action-text;
-
-	&,
-	&:visited {
-		color: #555555;
-		font-weight: bold;
+	&:hover,
+	&:focus {
+		color: $vui-link-color-focus;
+		text-decoration: $vui-link-textDecoration-focus;
 	}
-
-	&:hover {
-		color: #333333;
-	}
-}
-
-@mixin vui-icon-action-text-gray() {
-	@include vui-icon-action-text;
-	color: #353535
 }
 
 @mixin vui-icon-action-img() {
