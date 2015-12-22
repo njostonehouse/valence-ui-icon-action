@@ -8,10 +8,10 @@
   },
   "scripts": {
     "clean": "rimraf image-action.css",
+    "pretest": "npm run build",
     "test": "csslint image-action.css",
     "prebuild": "npm run clean",
     "build": "node-sass --output-style expanded image-action.css.scss image-action.css",
-    "postbuild": "npm test",
     "postinstall": "bower install"
   },
   "keywords": [
