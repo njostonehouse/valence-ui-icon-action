@@ -1,6 +1,6 @@
 {
-	"name": "vui-icon-action",
-	"main": "icon-action.scss",
+	"name": "vui-image-action",
+	"main": "image-action.scss",
 	"license": "Apache-2.0",
 	"ignore": [
 		".editorconfig",
