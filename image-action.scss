@@ -1,7 +1,7 @@
 @import 'bower_components/vui-link/link.scss';
 @import 'bower_components/vui-focus/focus.scss';
 
-@mixin vui-icon-action() {
+@mixin vui-image-action() {
 	display: inline-block;
 	text-decoration: none;
 
@@ -10,7 +10,7 @@
 	}
 }
 
-@mixin vui-icon-action-text() {
+@mixin vui-image-action-text() {
 	color: $vui-link-color;
 	cursor: pointer;
 	text-decoration: $vui-link-textDecoration;
@@ -29,7 +29,7 @@
 	}
 }
 
-@mixin vui-icon-action-img() {
+@mixin vui-image-action-img() {
 	vertical-align: middle;
 	[dir='rtl'] & {
 		background-position: right top;

@@ -1,16 +1,16 @@
 {
-  "name": "vui-icon-action",
+  "name": "vui-image-action",
   "version": "0.0.1",
-  "description": "Mixins and CSS for applying icon action styles",
+  "description": "Mixins and CSS for applying image action styles",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Brightspace/valence-ui-icon-action.git"
+    "url": "https://github.com/Brightspace/valence-ui-image-action.git"
   },
   "scripts": {
-    "clean": "rimraf icon-action.css",
-    "test": "csslint icon-action.css",
+    "clean": "rimraf image-action.css",
+    "test": "csslint image-action.css",
     "prebuild": "npm run clean",
-    "build": "node-sass --output-style expanded icon-action.css.scss icon-action.css",
+    "build": "node-sass --output-style expanded image-action.css.scss image-action.css",
     "postbuild": "npm test",
     "postinstall": "bower install"
   },
