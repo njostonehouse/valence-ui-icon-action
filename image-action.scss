@@ -8,30 +8,31 @@
 	&:focus {
 		@include vui-focus-outline;
 	}
-}
 
-@mixin vui-image-action-text() {
-	color: $vui-link-color;
-	cursor: pointer;
-	text-decoration: $vui-link-textDecoration;
-	padding-left: 4px;
-	vertical-align: middle;
+	span {
+		color: $vui-link-color;
+		cursor: pointer;
+		text-decoration: $vui-link-textDecoration;
+		padding-left: 4px;
+		vertical-align: middle;
 
-	[dir='rtl'] & {
-		padding-right: 4px;
-		padding-left: 0;
+		[dir='rtl'] & {
+			padding-right: 4px;
+			padding-left: 0;
+		}
+
+		&:hover,
+		&:focus {
+			color: $vui-link-color-focus;
+			text-decoration: $vui-link-textDecoration-focus;
+		}
 	}
 
-	&:hover,
-	&:focus {
-		color: $vui-link-color-focus;
-		text-decoration: $vui-link-textDecoration-focus;
-	}
-}
+	img {
+		vertical-align: middle;
 
-@mixin vui-image-action-img() {
-	vertical-align: middle;
-	[dir='rtl'] & {
-		background-position: right top;
+		[dir='rtl'] & {
+			background-position: right top;
+		}
 	}
 }
