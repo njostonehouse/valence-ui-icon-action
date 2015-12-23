@@ -9,7 +9,7 @@
 		@include vui-focus-outline;
 	}
 
-	span {
+	>span {
 		color: $vui-link-color;
 		cursor: pointer;
 		text-decoration: $vui-link-textDecoration;
@@ -28,7 +28,7 @@
 		}
 	}
 
-	img {
+	>img {
 		vertical-align: middle;
 
 		[dir='rtl'] & {
