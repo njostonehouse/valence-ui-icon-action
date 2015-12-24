@@ -1,6 +1,6 @@
 {
   "name": "vui-image-action",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Mixins and CSS for applying image action styles",
   "repository": {
     "type": "git",
