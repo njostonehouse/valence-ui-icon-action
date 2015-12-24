@@ -5,10 +5,6 @@
 	display: inline-block;
 	text-decoration: none;
 
-	&:focus {
-		@include vui-focus-outline;
-	}
-
 	>span {
 		color: $vui-link-color;
 		cursor: pointer;
@@ -20,12 +16,6 @@
 			padding-right: 4px;
 			padding-left: 0;
 		}
-
-		&:hover,
-		&:focus {
-			color: $vui-link-color-focus;
-			text-decoration: $vui-link-textDecoration-focus;
-		}
 	}
 
 	>img {
@@ -33,6 +23,18 @@
 
 		[dir='rtl'] & {
 			background-position: right top;
+		}
+	}
+
+	&:focus {
+		@include vui-focus-outline;
+	}
+
+	&:hover,
+	&:focus {
+		>span {
+			color: $vui-link-color-focus;
+			text-decoration: $vui-link-textDecoration-focus;
 		}
 	}
 }
