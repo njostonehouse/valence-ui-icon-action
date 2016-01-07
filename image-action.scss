@@ -1,14 +1,12 @@
-@import 'bower_components/vui-link/link.scss';
 @import 'bower_components/vui-focus/focus.scss';
+@import 'bower_components/vui-colors/colors.scss';
 
 @mixin vui-image-action() {
 	display: inline-block;
 	text-decoration: none;
 
 	>span {
-		color: $vui-link-color;
-		cursor: pointer;
-		text-decoration: $vui-link-textDecoration;
+		color: $vui-color-ferrite;
 		padding-left: 4px;
 		vertical-align: middle;
 
@@ -33,8 +31,8 @@
 	&:hover,
 	&:focus {
 		>span {
-			color: $vui-link-color-focus;
-			text-decoration: $vui-link-textDecoration-focus;
+			color: $vui-color-celestine;
+			cursor: pointer;
 		}
 	}
 }
