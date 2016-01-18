@@ -7,12 +7,13 @@
 
 	>span {
 		color: $vui-color-ferrite;
-		padding-left: 6px;
+		font-size: 0.7rem;
+		padding-left: 0.3rem;
 		text-decoration: none;
 		vertical-align: middle;
 
 		[dir='rtl'] & {
-			padding-right: 6px;
+			padding-right: 0.3rem;
 			padding-left: 0;
 		}
 	}
