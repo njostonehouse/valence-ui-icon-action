@@ -7,11 +7,12 @@
 
 	>span {
 		color: $vui-color-ferrite;
-		padding-left: 4px;
+		padding-left: 6px;
+		text-decoration: none;
 		vertical-align: middle;
 
 		[dir='rtl'] & {
-			padding-right: 4px;
+			padding-right: 6px;
 			padding-left: 0;
 		}
 	}
@@ -31,8 +32,8 @@
 	&:hover,
 	&:focus {
 		>span {
-			color: $vui-color-celestine;
 			cursor: pointer;
+			text-decoration: underline;
 		}
 	}
 }
