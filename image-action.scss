@@ -12,22 +12,22 @@
 	}
 
 	>li:first-child {
-		padding-right: 0;
+		padding-left: 0;
 	}
 
 	>li:last-child {
-		padding-left: 0;
+		padding-right: 0;
 	}
 
 	[dir='rtl'] & {
 		>li:first-child {
-			padding-left: 0;
-			padding-right: 0.72rem;
+			padding-left: 0.72rem;
+			padding-right: 0;
 		}
 
 		>li:last-child {
-			padding-left: 0.72rem;
-			padding-right: 0;
+			padding-left: 0;
+			padding-right: 0.72rem;
 		}
 	}
 }
