@@ -6,15 +6,17 @@
 	white-space: nowrap;
 
 	>li {
-		display:inline-block;
-	}
-
-	>li:not(:first-child) {
+		display: inline-block;
 		padding-left: 0.72rem;
+		padding-right: 0.72rem;
 	}
 
-	>li:not(:last-child) {
-		padding-right: 0.72rem;
+	>li:first-child {
+		padding-right: 0;
+	}
+
+	>li:last-child {
+		padding-left: 0;
 	}
 
 	[dir='rtl'] & {
