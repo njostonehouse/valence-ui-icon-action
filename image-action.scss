@@ -1,6 +1,37 @@
 @import 'bower_components/vui-focus/focus.scss';
 @import 'bower_components/vui-colors/colors.scss';
 
+@mixin vui-page-image-actions() {
+	list-style: none;
+	white-space: nowrap;
+
+	>li {
+		display: inline-block;
+		padding-left: 0.72rem;
+		padding-right: 0.72rem;
+	}
+
+	>li:first-child {
+		padding-left: 0;
+	}
+
+	>li:last-child {
+		padding-right: 0;
+	}
+
+	[dir='rtl'] & {
+		>li:first-child {
+			padding-left: 0.72rem;
+			padding-right: 0;
+		}
+
+		>li:last-child {
+			padding-left: 0;
+			padding-right: 0.72rem;
+		}
+	}
+}
+
 @mixin vui-image-action() {
 	display: inline-block;
 	text-decoration: none;

@@ -1,5 +1,9 @@
 @import 'image-action.scss';
 
+.vui-page-image-actions {
+	@include vui-page-image-actions;
+}
+
 .vui-image-action {
 	@include vui-image-action;
 }
