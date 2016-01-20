@@ -1,5 +1,5 @@
 @import 'bower_components/vui-focus/focus.scss';
-@import 'bower_components/vui-colors/colors.scss';
+@import 'bower_components/vui-typography/small-text.scss';
 
 @mixin vui-page-image-actions() {
 	list-style: none;
@@ -37,9 +37,7 @@
 	text-decoration: none;
 
 	>span {
-		color: $vui-color-ferrite;
-		font-size: 0.7rem;
-		font-weight: normal;
+		@include vui-typography-small-text;
 		padding-left: 0.3rem;
 		text-decoration: none;
 		vertical-align: middle;
