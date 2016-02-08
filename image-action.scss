@@ -1,4 +1,3 @@
-@import 'bower_components/vui-focus/focus.scss';
 @import 'bower_components/vui-typography/small-text.scss';
 
 @mixin vui-image-action-list() {
@@ -7,8 +6,8 @@
 
 	>li {
 		display: inline-block;
-		padding-left: 0.72rem;
-		padding-right: 0.72rem;
+		padding: 0.2rem 0.72rem 0.2rem 0.72rem;
+		vertical-align: middle;
 	}
 
 	>li:first-child {
@@ -54,10 +53,6 @@
 		[dir='rtl'] & {
 			background-position: right top;
 		}
-	}
-
-	&:focus {
-		@include vui-focus-outline;
 	}
 
 	&:hover,
