@@ -3,13 +3,19 @@
 [![Build status][ci-image]][ci-url]
 [![Dependency Status][dependencies-image]][dependencies-url]
 
-This component contains Sass mixins and CSS which can be used to style icon actions.
+This component contains [SASS mixins](http://sass-lang.com/) and CSS that you can use to style image actions.
+
+An Image Action is a link associated with an image that performs an action when clicked.
+
+![screenshot of image actions](/screenshots/overview.png)
 
 For further information on this component and other VUI components, see the docs at [ui.valence.d2l.com](http://ui.valence.d2l.com/).
 
 #### Coding styles
 See the [VUI Best Practices & Style Guide](https://github.com/Brightspace/valence-ui-docs/wiki/Best-Practices-&-Style-Guide) for information on VUI naming conventions, plus information about the [EditorConfig](http://editorconfig.org) rules used in this repo.
 
+[bower-url]: http://bower.io/search/?q=vui-image-action
+[bower-image]: https://img.shields.io/bower/v/vui-image-action.svg
 [npm-url]: https://www.npmjs.org/package/vui-image-action
 [npm-image]: https://img.shields.io/npm/v/vui-image-action.svg
 [ci-url]: https://travis-ci.org/Brightspace/valence-ui-image-action

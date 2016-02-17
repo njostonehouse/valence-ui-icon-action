@@ -7,11 +7,12 @@
     "url": "https://github.com/Brightspace/valence-ui-image-action.git"
   },
   "scripts": {
+    "prebuild": "npm run clean",
+    "build": "node-sass --output-style expanded image-action.css.scss image-action.css",
+    "postbuild": "phantomjs ./screenshots/build.js",
     "clean": "rimraf image-action.css",
     "pretest": "npm run build",
     "test": "csslint image-action.css",
-    "prebuild": "npm run clean",
-    "build": "node-sass --output-style expanded image-action.css.scss image-action.css",
     "postinstall": "bower install"
   },
   "keywords": [
@@ -26,9 +27,10 @@
   "devDependencies": {
     "csslint": "^0.10.0",
     "node-sass": "^3.4.2",
+    "phantomjs-prebuilt": "^2.1.4",
     "rimraf": "^2.4.4"
   },
   "dependencies": {
-    "bower": "^1.7.1"
+    "bower": "^1.7.7"
   }
 }
