@@ -11,6 +11,7 @@
     "build": "node-sass --output-style expanded image-action.css.scss image-action.css",
     "postbuild": "phantomjs ./screenshots/build.js",
     "clean": "rimraf image-action.css",
+    "perceptual-diff": "percy snapshot test/",
     "pretest": "npm run build",
     "test": "csslint image-action.css",
     "postinstall": "bower install"
