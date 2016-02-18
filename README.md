@@ -7,7 +7,76 @@ This component contains [SASS mixins](http://sass-lang.com/) and CSS that you ca
 
 An Image Action is a link associated with an image that performs an action when clicked.
 
-![screenshot of image actions](/screenshots/overview.png)
+![screenshot of image actions](/screenshots/single.png)
+
+
+## Installation
+
+`vui-image-action` can be installed from [Bower][bower-url]:
+```shell
+bower install vui-image-action
+```
+
+Or alternatively from [NPM][npm-url]:
+```shell
+npm install vui-image-action
+```
+
+Depending on which installation method you choose, use that path when doing the SASS import:
+
+```scss
+@import 'bower_components/vui-image-action/vui-image-action.scss';
+// or...
+@import "node_modules/vui-image-action/vui-image-action.scss";
+```
+
+## Usage
+
+An Image Action must have a `<img>` element for the image, and a `<span>` element describing the action. These elements should be enclosed in a `<a>` that performs the action when clicked.
+
+HTML:
+```html
+<a onclick="return false;" href="javascript:void(0);">
+	<img src="img/help.svg">
+	<span>Action</span>
+</a>
+```
+
+SCSS:
+```scss
+a {
+	@include vui-image-action;
+}
+```
+
+Multiple Image Actions can be grouped in a list.
+HTML:
+```html
+<ul>
+	<li>
+		<a onclick="return false;" href="javascript:void(0);">
+			<img src="img/print.svg">
+			<span>Print</span>
+		</a>
+	</li>
+	<li>
+		<a onclick="return false;" href="javascript:void(0);">
+			<img src="img/settings.svg">
+			<span>Settings</span>
+		</a>
+	</li>
+</ul>
+```
+SCSS:
+```scss
+ul {
+	@include vui-image-action-list;
+}
+a {
+	@include vui-image-action;
+}
+```
+
 
 For further information on this component and other VUI components, see the docs at [ui.valence.d2l.com](http://ui.valence.d2l.com/).
 

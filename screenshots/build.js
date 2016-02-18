@@ -1,24 +1,25 @@
 var page = require('webpage').create();
 page.viewportSize = {width: 750, height: 1000};
 
-function capture(name, width) {
+function capture(url, name, callback) {
+	page.open(url, function() {
+		var clipRect = page.evaluate(function (n) {
+			return document.querySelector('.screenshot-' + n)
+				.getBoundingClientRect();
+		}, name);
 
-	var clipRect = page.evaluate(function(n) {
-		return document.querySelector('.screenshot-' + n)
-			.getBoundingClientRect();
-	}, name);
-
-	page.clipRect = {
-		top:    clipRect.top,
-		left:   clipRect.left,
-		width:  width || clipRect.width,
-		height: clipRect.height
-	};
-	page.render('./screenshots/' + name + '.png');
-
+		page.clipRect = {
+			top: clipRect.top,
+			left: clipRect.left,
+			width: clipRect.width,
+			height: clipRect.height
+		};
+		page.render('./screenshots/' + name + '.png');
+		callback();
+	});
 }
 
-page.open('./test/test.html', function() {
-	capture('overview', 400);
-	phantom.exit();
-});
+capture('./test/image-action-list.html', 'multiple', phantom.exit);
+
+
+
