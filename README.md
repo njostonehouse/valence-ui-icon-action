@@ -7,7 +7,7 @@ This component contains [SASS mixins](http://sass-lang.com/) and CSS that you ca
 
 An Image Action is a link associated with an image that performs an action when clicked.
 
-![screenshot of image actions](/screenshots/single.png)
+![screenshot of image actions](/screenshots/multiple.png)
 
 
 ## Installation
@@ -50,6 +50,7 @@ a {
 ```
 
 Multiple Image Actions can be grouped in a list.
+
 HTML:
 ```html
 <ul>
