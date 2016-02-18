@@ -37,7 +37,7 @@ An Image Action must have a `<img>` element for the image, and a `<span>` elemen
 HTML:
 ```html
 <a onclick="return false;" href="javascript:void(0);">
-	<img src="img/help.svg">
+	<img src="img/help.svg" alt="">
 	<span>Action</span>
 </a>
 ```
@@ -56,13 +56,13 @@ HTML:
 <ul>
 	<li>
 		<a onclick="return false;" href="javascript:void(0);">
-			<img src="img/print.svg">
+			<img src="img/print.svg" alt="">
 			<span>Print</span>
 		</a>
 	</li>
 	<li>
 		<a onclick="return false;" href="javascript:void(0);">
-			<img src="img/settings.svg">
+			<img src="img/settings.svg" alt="">
 			<span>Settings</span>
 		</a>
 	</li>
