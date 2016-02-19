@@ -26,9 +26,9 @@ npm install vui-image-action
 Depending on which installation method you choose, use that path when doing the SASS import:
 
 ```scss
-@import 'bower_components/vui-image-action/vui-image-action.scss';
+@import 'bower_components/vui-image-action/image-action.scss';
 // or...
-@import "node_modules/vui-image-action/vui-image-action.scss";
+@import "node_modules/vui-image-action/image-action.scss";
 ```
 
 ## Usage
