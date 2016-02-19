@@ -1,4 +1,5 @@
 # vui-image-action
+[![Bower version][bower-image]][bower-url]
 [![NPM version][npm-image]][npm-url]
 [![Build status][ci-image]][ci-url]
 [![Dependency Status][dependencies-image]][dependencies-url]
@@ -36,7 +37,7 @@ An Image Action must have a `<img>` element for the image, and a `<span>` elemen
 
 HTML:
 ```html
-<a onclick="return false;" href="javascript:void(0);">
+<a href="#">
 	<img src="img/help.svg" alt="">
 	<span>Action</span>
 </a>
@@ -55,13 +56,13 @@ HTML:
 ```html
 <ul>
 	<li>
-		<a onclick="return false;" href="javascript:void(0);">
+		<a href="#">
 			<img src="img/print.svg" alt="">
 			<span>Print</span>
 		</a>
 	</li>
 	<li>
-		<a onclick="return false;" href="javascript:void(0);">
+		<a href="#">
 			<img src="img/settings.svg" alt="">
 			<span>Settings</span>
 		</a>
