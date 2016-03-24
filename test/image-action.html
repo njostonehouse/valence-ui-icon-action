@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script src="https://s.brightspace.com/lib/webcomponentsjs/0.7.21/webcomponents-lite.min.js"></script>
+	<script>
+		window.Polymer = window.Polymer || {};
+		window.Polymer.dom = 'shadow';
+	</script>
 	<link rel="stylesheet" type="text/css" href="image-action.css">
 	<link rel="stylesheet" type="text/css" href="screenshots.css">
+	<link rel="import" href="../image-action.html">
 </head>
 
 <body>
@@ -18,5 +24,13 @@
 			<img src="img/help.svg">
 			<span>Action</span>
 		</a>
+	</div>
+
+	<div>
+		<a is="vui-image-action" src="img/help.svg" href="#">Test</a>
+	</div>
+
+	<div dir="rtl">
+		<a is="vui-image-action" src="img/help.svg" href="#">Test</a>
 	</div>
 </body>

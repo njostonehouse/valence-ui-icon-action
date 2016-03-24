@@ -1,0 +1,51 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../vui-typography/small-text.scss">
+<dom-module id="vui-image-action">
+	<template>
+		<style include="vui-typography-small-text"></style>
+		<style>
+			:host {
+				@include vui-typography-small-text;
+				display: inline-block;
+				text-decoration: none;
+			}
+
+			:host span {
+				padding-left: 0.5rem;
+				text-decoration: none;
+				vertical-align: middle;
+			}
+
+			:host img {
+				vertical-align: middle;
+			}
+
+			:host-context([dir='rtl']) span {
+				padding-right: 0.5rem;
+				padding-left: 0;
+			}
+
+			:host-context([dir='rtl']) img {
+				background-position: right top;
+			}
+
+			:host(:hover), :host(:focus) {
+				cursor: pointer;
+			}
+
+			:host(:hover) span, :host(:focus) span {
+				text-decoration: underline;
+			}
+		</style>
+		<img src="[[src]]"/>
+		<span>
+			<content></content>
+		</span>
+	</template>
+	<script>
+		Polymer({
+			extends: 'a',
+			is: 'vui-image-action'
+		});
+	</script>
+</dom-module>
