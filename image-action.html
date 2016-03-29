@@ -39,13 +39,63 @@
 		</style>
 		<img src="[[src]]"/>
 		<span>
-			<content></content>
+			<content/>
 		</span>
 	</template>
 	<script>
 		Polymer({
 			extends: 'a',
 			is: 'vui-image-action'
+		});
+	</script>
+</dom-module>
+
+<dom-module id="vui-image-action-list">
+	<template>
+		<style>
+			:host {
+				list-style: none;
+				white-space: nowrap;
+			}
+
+			:host li {
+				display: inline-block;
+				padding: 0.2rem 0.72rem 0.2rem 0.72rem;
+				vertical-align: middle;
+			}
+
+			:host li:first-child {
+				padding-left: 0;
+			}
+
+			:host li:last-child {
+				padding-right: 0;
+			}
+
+			:host-context([dir='rtl']) li:first-child {
+				padding-left: 0.72rem;
+				padding-right: 0;
+			}
+
+			:host-context([dir='rtl']) li:last-child {
+				padding-left: 0;
+				padding-right: 0.72rem;
+			}
+		</style>
+
+		<ul id="list"/>
+	</template>
+	<script>
+		Polymer({
+			is: 'vui-image-action-list',
+			ready: function() {
+				var scope = this;
+				Polymer.dom(this).children.forEach( function(item) {
+					var listItem = document.createElement('li');
+					listItem.appendChild(item);
+					scope.$.list.appendChild(listItem);
+				});
+			}
 		});
 	</script>
 </dom-module>
