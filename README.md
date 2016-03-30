@@ -1,10 +1,11 @@
+**Looking for SASS-based `vui-image-action`?** It's [over here](https://github.com/Brightspace/valence-ui-image-action/tree/sass).
+
 # vui-image-action
 [![Bower version][bower-image]][bower-url]
-[![NPM version][npm-image]][npm-url]
 [![Build status][ci-image]][ci-url]
 [![Dependency Status][dependencies-image]][dependencies-url]
 
-This component contains [SASS mixins](http://sass-lang.com/) and CSS that you can use to style image actions.
+A Valence UI, [Polymer](https://www.polymer-project.org/1.0/)-based web component for image action styles.
 
 An Image Action is a link associated with an image that performs an action when clicked.
 
@@ -18,67 +19,38 @@ An Image Action is a link associated with an image that performs an action when 
 bower install vui-image-action
 ```
 
-Or alternatively from [NPM][npm-url]:
-```shell
-npm install vui-image-action
-```
-
-Depending on which installation method you choose, use that path when doing the SASS import:
-
-```scss
-@import 'bower_components/vui-image-action/image-action.scss';
-// or...
-@import "node_modules/vui-image-action/image-action.scss";
-```
-
 ## Usage
 
-An Image Action must have a `<img>` element for the image, and a `<span>` element describing the action. These elements should be enclosed in a `<a>` that performs the action when clicked.
+Include the [webcomponents.js](http://webcomponents.org/polyfills/) "lite" polyfill (for browsers who don't natively support web components), and import `image-action.html`.
+
+```html
+<head>
+	<script src="https://s.brightspace.com/lib/webcomponentsjs/0.7.21/webcomponents-lite.min.js"></script>
+	<link rel="import" href="../vui-image-action/image-action.html">
+</head>
+```
+
+Use the `vui-image-action` tag with the `image` attribute to specify the image to display. The child of `vui-image-action` will be used to determine the action to perform when clicked.
 
 HTML:
 ```html
-<a href="#">
-	<img src="img/help.svg" alt="">
-	<span>Action</span>
-</a>
+<vui-image-action image="img/help.svg">
+	<a href="#">Help</a>
+</vui-image-action>
 ```
 
-SCSS:
-```scss
-a {
-	@include vui-image-action;
-}
-```
-
-Multiple Image Actions can be grouped in a list.
+Use the `vui-image-action-list` tag to group Image Actions in a list.
 
 HTML:
 ```html
-<ul>
-	<li>
-		<a href="#">
-			<img src="img/print.svg" alt="">
-			<span>Print</span>
-		</a>
-	</li>
-	<li>
-		<a href="#">
-			<img src="img/settings.svg" alt="">
-			<span>Settings</span>
-		</a>
-	</li>
-</ul>
-```
-SCSS:
-```scss
-ul {
-	@include vui-image-action-list;
-}
-a {
-	@include vui-image-action;
-}
-```
-
+<vui-image-action-list>
+	<vui-image-action image="img/print.svg">
+		<a href="#">Print</a>
+	</vui-image-action>
+	<vui-image-action image="img/settings.svg">
+		<a href="#">Settings</a>
+	</vui-image-action>
+</vui-image-action-list>
 
 For further information on this component and other VUI components, see the docs at [ui.valence.d2l.com](http://ui.valence.d2l.com/).
 
@@ -87,8 +59,6 @@ See the [VUI Best Practices & Style Guide](https://github.com/Brightspace/valenc
 
 [bower-url]: http://bower.io/search/?q=vui-image-action
 [bower-image]: https://img.shields.io/bower/v/vui-image-action.svg
-[npm-url]: https://www.npmjs.org/package/vui-image-action
-[npm-image]: https://img.shields.io/npm/v/vui-image-action.svg
 [ci-url]: https://travis-ci.org/Brightspace/valence-ui-image-action
 [ci-image]: https://travis-ci.org/Brightspace/valence-ui-image-action.svg?branch=master
 [dependencies-url]: https://david-dm.org/brightspace/valence-ui-image-action
