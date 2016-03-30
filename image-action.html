@@ -1,17 +1,17 @@
 <link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../vui-typography/small-text.scss">
+<link rel="import" href="../vui-typography/small-text.html">
 <dom-module id="vui-image-action">
 	<template>
-		<style include="vui-typography-small-text"></style>
-		<style>
+		<style is="custom-style" include="vui-small-text">
 			:host {
-				@include vui-typography-small-text;
 				display:inline-block;
 			}
 
 			:host ::content a {
+				@apply(--vui-small-text);
 				background-repeat: no-repeat;
 				background-position-y: 50%;
+				background-size: contain;
 				text-decoration: none;
 				padding-left: 1.5rem;
 				vertical-align: middle;
@@ -41,8 +41,14 @@
 			properties: {
 				image: String
 			},
-			ready: function() {
-				Polymer.dom(this).firstChild.style.backgroundImage = 'url(' + this.image + ')';
+			attached: function() {
+				var image = new Image();
+				image.src = this.image;
+				var action = Polymer.dom(this).firstChild;
+				action.style.backgroundImage = 'url(' + image.src + ')';
+
+				var imageActionPadding = (image.height - action.offsetHeight)/2;
+				action.style.paddingTop = action.style.paddingBottom = imageActionPadding < 0 ? 0 : imageActionPadding + "px";
 			}
 		});
 	</script>

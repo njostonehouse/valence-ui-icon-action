@@ -10,7 +10,7 @@
     "test"
   ],
   "dependencies": {
-    "vui-typography": "~2.0.0",
+    "vui-typography": "~3.0.0",
     "polymer": "~1.4.0"
   }
 }
