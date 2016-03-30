@@ -6,46 +6,44 @@
 		<style>
 			:host {
 				@include vui-typography-small-text;
-				display: inline-block;
-				text-decoration: none;
+				display:inline-block;
 			}
 
-			:host span {
-				padding-left: 0.5rem;
+			:host ::content a {
+				background-repeat: no-repeat;
+				background-position-y: 50%;
 				text-decoration: none;
+				padding-left: 1.5rem;
 				vertical-align: middle;
 			}
 
-			:host img {
-				vertical-align: middle;
-			}
-
-			:host-context([dir='rtl']) span {
-				padding-right: 0.5rem;
+			:host-context([dir='rtl']) ::content a {
+				background-position-x: 100%;
 				padding-left: 0;
-			}
-
-			:host-context([dir='rtl']) img {
-				background-position: right top;
+				padding-right: 1.5rem;
 			}
 
 			:host(:hover), :host(:focus) {
 				cursor: pointer;
 			}
 
-			:host(:hover) span, :host(:focus) span {
+			:host(:hover) ::content a, :host(:focus) ::content a {
 				text-decoration: underline;
 			}
 		</style>
-		<img src="[[src]]"/>
-		<span>
-			<content/>
-		</span>
+
+		<content/>
+
 	</template>
 	<script>
 		Polymer({
-			extends: 'a',
-			is: 'vui-image-action'
+			is: 'vui-image-action',
+			properties: {
+				image: String
+			},
+			ready: function() {
+				Polymer.dom(this).firstChild.style.backgroundImage = 'url(' + this.image + ')';
+			}
 		});
 	</script>
 </dom-module>
@@ -58,42 +56,41 @@
 				white-space: nowrap;
 			}
 
-			:host li {
+			:host ::content vui-image-action {
 				display: inline-block;
 				padding: 0.2rem 0.72rem 0.2rem 0.72rem;
 				vertical-align: middle;
 			}
 
-			:host li:first-child {
+			:host ::content vui-image-action:first-child {
 				padding-left: 0;
 			}
 
-			:host li:last-child {
+			:host ::content vui-image-action:last-child {
 				padding-right: 0;
 			}
 
-			:host-context([dir='rtl']) li:first-child {
+			:host-context([dir='rtl']) ::content vui-image-action:first-child {
 				padding-left: 0.72rem;
 				padding-right: 0;
 			}
 
-			:host-context([dir='rtl']) li:last-child {
+			:host-context([dir='rtl']) ::content vui-image-action:last-child {
 				padding-left: 0;
 				padding-right: 0.72rem;
 			}
 		</style>
 
-		<ul id="list"/>
+		<content/>
+
 	</template>
 	<script>
 		Polymer({
 			is: 'vui-image-action-list',
 			ready: function() {
-				var scope = this;
+				Polymer.dom(this).setAttribute("role", "list");
 				Polymer.dom(this).children.forEach( function(item) {
-					var listItem = document.createElement('li');
-					listItem.appendChild(item);
-					scope.$.list.appendChild(listItem);
+					item.setAttribute("role", "listitem");
 				});
 			}
 		});
