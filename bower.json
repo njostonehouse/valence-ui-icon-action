@@ -1,6 +1,6 @@
 {
   "name": "vui-image-action",
-  "main": "image-action.scss",
+  "main": "image-action.html",
   "license": "Apache-2.0",
   "ignore": [
     ".editorconfig",

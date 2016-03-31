@@ -6,27 +6,17 @@
 		window.Polymer = window.Polymer || {};
 		window.Polymer.dom = 'shadow';
 	</script>
-	<link rel="stylesheet" type="text/css" href="image-action.css">
-	<link rel="stylesheet" type="text/css" href="screenshots.css">
 	<link rel="import" href="../image-action.html">
+	<link rel="import" href="../bower_components/vui-typography/typography.html">
+	<style is="custom-style" include="vui-typography">
+		html {
+			font-size: 20px;
+		}
+	</style>
 </head>
 
 <body>
-	<div class="screenshots screenshot-single">
-		<a class="vui-image-action" href="#">
-			<img src="img/help.svg">
-			<span>Action</span>
-		</a>
-	</div>
-
-	<div dir="rtl">
-		<a class="vui-image-action" href="#">
-			<img src="img/help.svg">
-			<span>Action</span>
-		</a>
-	</div>
-
-	<div>
+	<div class="vui-typography screenshot-single">
 		<vui-image-action image="img/help.svg"><a href="#">Test</a></vui-image-action>
 	</div>
 

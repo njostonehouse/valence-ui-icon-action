@@ -6,59 +6,17 @@
 		window.Polymer = window.Polymer || {};
 		window.Polymer.dom = 'shadow';
 	</script>
-	<link rel="stylesheet" type="text/css" href="image-action.css">
-	<link rel="stylesheet" type="text/css" href="screenshots.css">
 	<link rel="import" href="../image-action.html">
+	<link rel="import" href="../bower_components/vui-typography/typography.html">
+	<style is="custom-style" include="vui-typography">
+		html {
+			font-size: 20px;
+		}
+	</style>
 </head>
 
 <body>
-	<div class="screenshots screenshot-multiple">
-		<ul class="vui-image-action-list">
-			<li>
-				<a class="vui-image-action" href="#">
-					<img src="img/print.svg">
-					<span>Print</span>
-				</a>
-			</li>
-			<li>
-				<a class="vui-image-action" href="#">
-					<img src="img/settings.svg">
-					<span>Settings</span>
-				</a>
-			</li>
-			<li>
-				<a class="vui-image-action" href="#">
-					<img src="img/help.svg">
-					<span>Help</span>
-				</a>
-			</li>
-		</ul>
-	</div>
-
-	<div dir="rtl">
-		<ul class="vui-image-action-list">
-			<li>
-				<a class="vui-image-action" href="#">
-					<img src="img/print.svg">
-					<span>Print</span>
-				</a>
-			</li>
-			<li>
-				<a class="vui-image-action" href="#">
-					<img src="img/settings.svg">
-					<span>Settings</span>
-				</a>
-			</li>
-			<li>
-				<a class="vui-image-action" href="#">
-					<img src="img/help.svg">
-					<span>Help</span>
-				</a>
-			</li>
-		</ul>
-	</div>
-
-	<div>
+	<div class="vui-typography screenshot-multiple">
 		<vui-image-action-list>
 			<vui-image-action image="img/print.svg"><a href="#">Print</a></vui-image-action>
 			<vui-image-action image="img/settings.svg"><a href="#">Settings</a></vui-image-action>
