@@ -11,16 +11,15 @@
 				@apply(--vui-small-text);
 				background-repeat: no-repeat;
 				background-position-y: 50%;
-				background-size: contain;
 				text-decoration: none;
-				padding-left: 1.5rem;
+				padding: var(--image-height-padding) 0 var(--image-height-padding) var(--image-width-padding);
 				vertical-align: middle;
 			}
 
 			:host-context([dir='rtl']) ::content a {
 				background-position-x: 100%;
 				padding-left: 0;
-				padding-right: 1.5rem;
+				padding-right: var(--image-width-padding);
 			}
 
 			:host(:hover), :host(:focus) {
@@ -42,13 +41,17 @@
 				image: String
 			},
 			attached: function() {
+				var action = Polymer.dom(this).firstChild;
 				var image = new Image();
 				image.src = this.image;
-				var action = Polymer.dom(this).firstChild;
+
 				action.style.backgroundImage = 'url(' + image.src + ')';
 
 				var imageActionPadding = (image.height - action.offsetHeight)/2;
-				action.style.paddingTop = action.style.paddingBottom = imageActionPadding < 0 ? 0 : imageActionPadding + "px";
+				this.customStyle['--image-height-padding'] = imageActionPadding < 0 ? 0 : imageActionPadding + "px";
+				this.customStyle['--image-width-padding'] = (image.width + 10) + 'px';
+
+				this.updateStyles();
 			}
 		});
 	</script>
