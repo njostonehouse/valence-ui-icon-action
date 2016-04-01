@@ -1,5 +1,5 @@
 <link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../vui-typography/small-text.html">
+<link rel="import" href="../vui-typography/typography.html">
 <dom-module id="vui-image-action">
 	<template>
 		<style is="custom-style" include="vui-small-text">
@@ -10,14 +10,16 @@
 			:host ::content a {
 				@apply(--vui-small-text);
 				background-repeat: no-repeat;
-				background-position-y: 50%;
+				background-position: 0 50%;
 				text-decoration: none;
-				padding: var(--image-height-padding) 0 var(--image-height-padding) var(--image-width-padding);
+				padding-top: var(--image-height-padding);
+				padding-bottom: var(--image-height-padding);
+				padding-left: var(--image-width-padding);
 				vertical-align: middle;
 			}
 
 			:host-context([dir='rtl']) ::content a {
-				background-position-x: 100%;
+				background-position: 100% 50%;
 				padding-left: 0;
 				padding-right: var(--image-width-padding);
 			}
@@ -41,17 +43,21 @@
 				image: String
 			},
 			attached: function() {
-				var action = Polymer.dom(this).firstChild;
-				var image = new Image();
+				var host = this;
+				var action = Polymer.dom(host).firstChild;
+				var image = document.createElement('img');
 				image.src = this.image;
 
 				action.style.backgroundImage = 'url(' + image.src + ')';
 
-				var imageActionPadding = (image.height - action.offsetHeight)/2;
-				this.customStyle['--image-height-padding'] = imageActionPadding < 0 ? 0 : imageActionPadding + "px";
-				this.customStyle['--image-width-padding'] = (image.width + 10) + 'px';
+				image.onload = function(){
+					var actionPadding = (image.clientHeight - action.offsetHeight)/2;
 
-				this.updateStyles();
+					host.updateStyles({
+						'--image-height-padding': actionPadding < 0 ? 0 : actionPadding + "px",
+						'--image-width-padding': (image.naturalWidth + 10) + 'px'
+					});
+				};
 			}
 		});
 	</script>
