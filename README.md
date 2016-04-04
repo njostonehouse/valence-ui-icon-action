@@ -51,6 +51,7 @@ HTML:
 		<a href="#">Settings</a>
 	</vui-image-action>
 </vui-image-action-list>
+```
 
 For further information on this component and other VUI components, see the docs at [ui.valence.d2l.com](http://ui.valence.d2l.com/).
 
